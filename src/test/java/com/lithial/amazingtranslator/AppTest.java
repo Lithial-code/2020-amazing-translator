@@ -18,4 +18,14 @@ public class AppTest
         assertTrue( true );
     }
 
+    @Test
+    public void checkDatabases() throws Exception {
+        assert(LanguageDatabase.getTranslation(3,0).equals("three"));
+    }
+    @Test
+    public void checkInput() throws Exception {
+        InputCollector input = new InputCollector();
+        assert(input.GetNumber("22") == 22);
+    }
+
 }
